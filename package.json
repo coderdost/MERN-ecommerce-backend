@@ -13,6 +13,7 @@
   "dependencies": {
     "connect-sqlite": "^0.0.1",
     "connect-sqlite3": "^0.9.13",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
