@@ -52,6 +52,15 @@ exports.loginUser = async (req, res) => {
     .json({ id: user.id, role: user.role });
 };
 
+exports.logout = async (req, res) => {
+  res
+    .cookie('jwt', null, {
+      expires: new Date(Date.now()),
+      httpOnly: true,
+    })
+    .sendStatus(200)
+};
+
 exports.checkAuth = async (req, res) => {
   if (req.user) {
     res.json(req.user);
